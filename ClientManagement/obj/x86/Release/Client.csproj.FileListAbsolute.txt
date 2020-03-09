@@ -1,0 +1,8 @@
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\Client.frmClient.resources
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\Client.Properties.Resources.resources
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\Client.csproj.GenerateResource.Cache
+D:\Project\ChatServer\ClientManagement\bin\Release\ClientSPI.exe.config
+D:\Project\ChatServer\ClientManagement\bin\Release\ClientSPI.exe
+D:\Project\ChatServer\ClientManagement\bin\Release\ClientSPI.pdb
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\ClientSPI.exe
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\ClientSPI.pdb

@@ -1,0 +1,9 @@
+D:\Project\CSharp RAT Example\CSharp RAT Example\wscc\bin\wscc.dll
+D:\Project\CSharp RAT Example\CSharp RAT Example\wscc\bin\wscc.pdb
+D:\Project\CSharp RAT Example\CSharp RAT Example\wscc\obj\Debug\wscc.dll
+D:\Project\CSharp RAT Example\CSharp RAT Example\wscc\obj\Debug\wscc.pdb
+D:\Project\ChatServer\wscc\bin\wscc.dll.config
+D:\Project\ChatServer\wscc\bin\wscc.dll
+D:\Project\ChatServer\wscc\bin\wscc.pdb
+D:\Project\ChatServer\wscc\obj\Debug\wscc.dll
+D:\Project\ChatServer\wscc\obj\Debug\wscc.pdb

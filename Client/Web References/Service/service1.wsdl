@@ -1,0 +1,1694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Host Info</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendCmd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCmdResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadCmd">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadCmdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadCmdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearCmd">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearCmdResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendOutput">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendOutputResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadOutput">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadOutputResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadOutputResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearOutput">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearOutputResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IfCMDRun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfCMDRunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfCMDRunResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForCMDRun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForCMDRunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetForCMDRunResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAllForNoCMDRun">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForNoCMDRunResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsUserRegistered">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserRegisteredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsUserRegisteredResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Register">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IfBrowserDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfBrowserDumpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfBrowserDumpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfInstalledAplicationDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfInstalledAplicationDumpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfInstalledAplicationDumpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoApplicationDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoApplicationDumpResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IfKeyLogDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfKeyLogDumpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfKeyLogDumpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoKeyDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoKeyDumpResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IfKeyScreenShare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfKeyScreenShareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfKeyScreenShareResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMyScreen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMyScreenResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMyScreen">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMyScreenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyScreenResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfWebCamDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IfWebCamDumpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IfWebCamDumpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMyWebCam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMyWebCamResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMyWebCam">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMyWebCamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyWebCamResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoBrowserDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoBrowserDumpResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetForBrowserDump">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForBrowserDumpResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strFromUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMess" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReceiveMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIfConnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIfConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIfConnectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIfUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIfUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIfUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uniqueIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="property" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterValueResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetForConnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForConnectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetForNoConnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoConnectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForConnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForConnectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForNoConnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForNoConnectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetForUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetForNoUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetForNoUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForNoUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetAllForNoUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssembly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssemblyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssemblyResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="program" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteFileResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendCmdSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCmd" />
+  </wsdl:message>
+  <wsdl:message name="SendCmdSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadCmdSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadCmd" />
+  </wsdl:message>
+  <wsdl:message name="ReadCmdSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearCmdSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearCmd" />
+  </wsdl:message>
+  <wsdl:message name="ClearCmdSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendOutputSoapIn">
+    <wsdl:part name="parameters" element="tns:SendOutput" />
+  </wsdl:message>
+  <wsdl:message name="SendOutputSoapOut">
+    <wsdl:part name="parameters" element="tns:SendOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadOutputSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadOutput" />
+  </wsdl:message>
+  <wsdl:message name="ReadOutputSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearOutputSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearOutput" />
+  </wsdl:message>
+  <wsdl:message name="ClearOutputSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfCMDRunSoapIn">
+    <wsdl:part name="parameters" element="tns:IfCMDRun" />
+  </wsdl:message>
+  <wsdl:message name="IfCMDRunSoapOut">
+    <wsdl:part name="parameters" element="tns:IfCMDRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForCMDRunSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForCMDRun" />
+  </wsdl:message>
+  <wsdl:message name="SetForCMDRunSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForCMDRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoCMDRunSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllForNoCMDRun" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoCMDRunSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllForNoCMDRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserRegisteredSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IsUserRegisteredSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfBrowserDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:IfBrowserDump" />
+  </wsdl:message>
+  <wsdl:message name="IfBrowserDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:IfBrowserDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfInstalledAplicationDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:IfInstalledAplicationDump" />
+  </wsdl:message>
+  <wsdl:message name="IfInstalledAplicationDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:IfInstalledAplicationDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoApplicationDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForNoApplicationDump" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoApplicationDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForNoApplicationDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfKeyLogDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:IfKeyLogDump" />
+  </wsdl:message>
+  <wsdl:message name="IfKeyLogDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:IfKeyLogDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoKeyDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForNoKeyDump" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoKeyDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForNoKeyDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfKeyScreenShareSoapIn">
+    <wsdl:part name="parameters" element="tns:IfKeyScreenShare" />
+  </wsdl:message>
+  <wsdl:message name="IfKeyScreenShareSoapOut">
+    <wsdl:part name="parameters" element="tns:IfKeyScreenShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMyScreenSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMyScreen" />
+  </wsdl:message>
+  <wsdl:message name="SetMyScreenSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMyScreenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyScreenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyScreen" />
+  </wsdl:message>
+  <wsdl:message name="GetMyScreenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyScreenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IfWebCamDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:IfWebCamDump" />
+  </wsdl:message>
+  <wsdl:message name="IfWebCamDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:IfWebCamDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMyWebCamSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMyWebCam" />
+  </wsdl:message>
+  <wsdl:message name="SetMyWebCamSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMyWebCamResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyWebCamSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyWebCam" />
+  </wsdl:message>
+  <wsdl:message name="GetMyWebCamSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyWebCamResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoBrowserDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForNoBrowserDump" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoBrowserDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForNoBrowserDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForBrowserDumpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForBrowserDump" />
+  </wsdl:message>
+  <wsdl:message name="SetForBrowserDumpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForBrowserDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveUser" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveMessage" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIfConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIfConnect" />
+  </wsdl:message>
+  <wsdl:message name="GetIfConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIfConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIfUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIfUpdate" />
+  </wsdl:message>
+  <wsdl:message name="GetIfUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIfUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterValueSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterValue" />
+  </wsdl:message>
+  <wsdl:message name="RegisterValueSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForConnect" />
+  </wsdl:message>
+  <wsdl:message name="SetForConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForNoConnect" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForNoConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllForConnect" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllForConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllForNoConnect" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllForNoConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetForUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetForNoUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetForNoUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetForNoUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllForUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllForUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllForNoUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetAllForNoUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllForNoUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectUsers" />
+  </wsdl:message>
+  <wsdl:message name="SelectUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssemblySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssembly" />
+  </wsdl:message>
+  <wsdl:message name="GetAssemblySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssemblyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WriteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:WriteFile" />
+  </wsdl:message>
+  <wsdl:message name="WriteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:WriteFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SoapServerSoap">
+    <wsdl:operation name="SendCmd">
+      <wsdl:input message="tns:SendCmdSoapIn" />
+      <wsdl:output message="tns:SendCmdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadCmd">
+      <wsdl:input message="tns:ReadCmdSoapIn" />
+      <wsdl:output message="tns:ReadCmdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCmd">
+      <wsdl:input message="tns:ClearCmdSoapIn" />
+      <wsdl:output message="tns:ClearCmdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOutput">
+      <wsdl:input message="tns:SendOutputSoapIn" />
+      <wsdl:output message="tns:SendOutputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadOutput">
+      <wsdl:input message="tns:ReadOutputSoapIn" />
+      <wsdl:output message="tns:ReadOutputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearOutput">
+      <wsdl:input message="tns:ClearOutputSoapIn" />
+      <wsdl:output message="tns:ClearOutputSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfCMDRun">
+      <wsdl:input message="tns:IfCMDRunSoapIn" />
+      <wsdl:output message="tns:IfCMDRunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForCMDRun">
+      <wsdl:input message="tns:SetForCMDRunSoapIn" />
+      <wsdl:output message="tns:SetForCMDRunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoCMDRun">
+      <wsdl:input message="tns:SetAllForNoCMDRunSoapIn" />
+      <wsdl:output message="tns:SetAllForNoCMDRunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserSoapIn" />
+      <wsdl:output message="tns:AddUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserRegistered">
+      <wsdl:input message="tns:IsUserRegisteredSoapIn" />
+      <wsdl:output message="tns:IsUserRegisteredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input message="tns:RegisterSoapIn" />
+      <wsdl:output message="tns:RegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfBrowserDump">
+      <wsdl:input message="tns:IfBrowserDumpSoapIn" />
+      <wsdl:output message="tns:IfBrowserDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfInstalledAplicationDump">
+      <wsdl:input message="tns:IfInstalledAplicationDumpSoapIn" />
+      <wsdl:output message="tns:IfInstalledAplicationDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoApplicationDump">
+      <wsdl:input message="tns:SetForNoApplicationDumpSoapIn" />
+      <wsdl:output message="tns:SetForNoApplicationDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyLogDump">
+      <wsdl:input message="tns:IfKeyLogDumpSoapIn" />
+      <wsdl:output message="tns:IfKeyLogDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoKeyDump">
+      <wsdl:input message="tns:SetForNoKeyDumpSoapIn" />
+      <wsdl:output message="tns:SetForNoKeyDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyScreenShare">
+      <wsdl:input message="tns:IfKeyScreenShareSoapIn" />
+      <wsdl:output message="tns:IfKeyScreenShareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMyScreen">
+      <wsdl:input message="tns:SetMyScreenSoapIn" />
+      <wsdl:output message="tns:SetMyScreenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyScreen">
+      <wsdl:input message="tns:GetMyScreenSoapIn" />
+      <wsdl:output message="tns:GetMyScreenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IfWebCamDump">
+      <wsdl:input message="tns:IfWebCamDumpSoapIn" />
+      <wsdl:output message="tns:IfWebCamDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMyWebCam">
+      <wsdl:input message="tns:SetMyWebCamSoapIn" />
+      <wsdl:output message="tns:SetMyWebCamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyWebCam">
+      <wsdl:input message="tns:GetMyWebCamSoapIn" />
+      <wsdl:output message="tns:GetMyWebCamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoBrowserDump">
+      <wsdl:input message="tns:SetForNoBrowserDumpSoapIn" />
+      <wsdl:output message="tns:SetForNoBrowserDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForBrowserDump">
+      <wsdl:input message="tns:SetForBrowserDumpSoapIn" />
+      <wsdl:output message="tns:SetForBrowserDumpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersSoapIn" />
+      <wsdl:output message="tns:GetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <wsdl:input message="tns:RemoveUserSoapIn" />
+      <wsdl:output message="tns:RemoveUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <wsdl:input message="tns:ReceiveMessageSoapIn" />
+      <wsdl:output message="tns:ReceiveMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIfConnect">
+      <wsdl:input message="tns:GetIfConnectSoapIn" />
+      <wsdl:output message="tns:GetIfConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIfUpdate">
+      <wsdl:input message="tns:GetIfUpdateSoapIn" />
+      <wsdl:output message="tns:GetIfUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterValue">
+      <wsdl:input message="tns:RegisterValueSoapIn" />
+      <wsdl:output message="tns:RegisterValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForConnect">
+      <wsdl:input message="tns:SetForConnectSoapIn" />
+      <wsdl:output message="tns:SetForConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoConnect">
+      <wsdl:input message="tns:SetForNoConnectSoapIn" />
+      <wsdl:output message="tns:SetForNoConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForConnect">
+      <wsdl:input message="tns:SetAllForConnectSoapIn" />
+      <wsdl:output message="tns:SetAllForConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoConnect">
+      <wsdl:input message="tns:SetAllForNoConnectSoapIn" />
+      <wsdl:output message="tns:SetAllForNoConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForUpdate">
+      <wsdl:input message="tns:SetForUpdateSoapIn" />
+      <wsdl:output message="tns:SetForUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoUpdate">
+      <wsdl:input message="tns:SetForNoUpdateSoapIn" />
+      <wsdl:output message="tns:SetForNoUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForUpdate">
+      <wsdl:input message="tns:SetAllForUpdateSoapIn" />
+      <wsdl:output message="tns:SetAllForUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoUpdate">
+      <wsdl:input message="tns:SetAllForNoUpdateSoapIn" />
+      <wsdl:output message="tns:SetAllForNoUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsers">
+      <wsdl:input message="tns:SelectUsersSoapIn" />
+      <wsdl:output message="tns:SelectUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssembly">
+      <wsdl:input message="tns:GetAssemblySoapIn" />
+      <wsdl:output message="tns:GetAssemblySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteFile">
+      <wsdl:input message="tns:WriteFileSoapIn" />
+      <wsdl:output message="tns:WriteFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapServerSoap" type="tns:SoapServerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendCmd">
+      <soap:operation soapAction="http://tempuri.org/SendCmd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadCmd">
+      <soap:operation soapAction="http://tempuri.org/ReadCmd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCmd">
+      <soap:operation soapAction="http://tempuri.org/ClearCmd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOutput">
+      <soap:operation soapAction="http://tempuri.org/SendOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOutput">
+      <soap:operation soapAction="http://tempuri.org/ReadOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearOutput">
+      <soap:operation soapAction="http://tempuri.org/ClearOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfCMDRun">
+      <soap:operation soapAction="http://tempuri.org/IfCMDRun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForCMDRun">
+      <soap:operation soapAction="http://tempuri.org/SetForCMDRun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoCMDRun">
+      <soap:operation soapAction="http://tempuri.org/SetAllForNoCMDRun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserRegistered">
+      <soap:operation soapAction="http://tempuri.org/IsUserRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfBrowserDump">
+      <soap:operation soapAction="http://tempuri.org/IfBrowserDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfInstalledAplicationDump">
+      <soap:operation soapAction="http://tempuri.org/IfInstalledAplicationDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoApplicationDump">
+      <soap:operation soapAction="http://tempuri.org/SetForNoApplicationDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyLogDump">
+      <soap:operation soapAction="http://tempuri.org/IfKeyLogDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoKeyDump">
+      <soap:operation soapAction="http://tempuri.org/SetForNoKeyDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyScreenShare">
+      <soap:operation soapAction="http://tempuri.org/IfKeyScreenShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMyScreen">
+      <soap:operation soapAction="http://tempuri.org/SetMyScreen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyScreen">
+      <soap:operation soapAction="http://tempuri.org/GetMyScreen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfWebCamDump">
+      <soap:operation soapAction="http://tempuri.org/IfWebCamDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMyWebCam">
+      <soap:operation soapAction="http://tempuri.org/SetMyWebCam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyWebCam">
+      <soap:operation soapAction="http://tempuri.org/GetMyWebCam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoBrowserDump">
+      <soap:operation soapAction="http://tempuri.org/SetForNoBrowserDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForBrowserDump">
+      <soap:operation soapAction="http://tempuri.org/SetForBrowserDump" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <soap:operation soapAction="http://tempuri.org/RemoveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <soap:operation soapAction="http://tempuri.org/ReceiveMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIfConnect">
+      <soap:operation soapAction="http://tempuri.org/GetIfConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIfUpdate">
+      <soap:operation soapAction="http://tempuri.org/GetIfUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterValue">
+      <soap:operation soapAction="http://tempuri.org/RegisterValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForConnect">
+      <soap:operation soapAction="http://tempuri.org/SetForConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoConnect">
+      <soap:operation soapAction="http://tempuri.org/SetForNoConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForConnect">
+      <soap:operation soapAction="http://tempuri.org/SetAllForConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoConnect">
+      <soap:operation soapAction="http://tempuri.org/SetAllForNoConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForUpdate">
+      <soap:operation soapAction="http://tempuri.org/SetForUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoUpdate">
+      <soap:operation soapAction="http://tempuri.org/SetForNoUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForUpdate">
+      <soap:operation soapAction="http://tempuri.org/SetAllForUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoUpdate">
+      <soap:operation soapAction="http://tempuri.org/SetAllForNoUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsers">
+      <soap:operation soapAction="http://tempuri.org/SelectUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssembly">
+      <soap:operation soapAction="http://tempuri.org/GetAssembly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFile">
+      <soap:operation soapAction="http://tempuri.org/WriteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SoapServerSoap12" type="tns:SoapServerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendCmd">
+      <soap12:operation soapAction="http://tempuri.org/SendCmd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadCmd">
+      <soap12:operation soapAction="http://tempuri.org/ReadCmd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCmd">
+      <soap12:operation soapAction="http://tempuri.org/ClearCmd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOutput">
+      <soap12:operation soapAction="http://tempuri.org/SendOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadOutput">
+      <soap12:operation soapAction="http://tempuri.org/ReadOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearOutput">
+      <soap12:operation soapAction="http://tempuri.org/ClearOutput" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfCMDRun">
+      <soap12:operation soapAction="http://tempuri.org/IfCMDRun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForCMDRun">
+      <soap12:operation soapAction="http://tempuri.org/SetForCMDRun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoCMDRun">
+      <soap12:operation soapAction="http://tempuri.org/SetAllForNoCMDRun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://tempuri.org/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserRegistered">
+      <soap12:operation soapAction="http://tempuri.org/IsUserRegistered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap12:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfBrowserDump">
+      <soap12:operation soapAction="http://tempuri.org/IfBrowserDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfInstalledAplicationDump">
+      <soap12:operation soapAction="http://tempuri.org/IfInstalledAplicationDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoApplicationDump">
+      <soap12:operation soapAction="http://tempuri.org/SetForNoApplicationDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyLogDump">
+      <soap12:operation soapAction="http://tempuri.org/IfKeyLogDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoKeyDump">
+      <soap12:operation soapAction="http://tempuri.org/SetForNoKeyDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfKeyScreenShare">
+      <soap12:operation soapAction="http://tempuri.org/IfKeyScreenShare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMyScreen">
+      <soap12:operation soapAction="http://tempuri.org/SetMyScreen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyScreen">
+      <soap12:operation soapAction="http://tempuri.org/GetMyScreen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IfWebCamDump">
+      <soap12:operation soapAction="http://tempuri.org/IfWebCamDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMyWebCam">
+      <soap12:operation soapAction="http://tempuri.org/SetMyWebCam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyWebCam">
+      <soap12:operation soapAction="http://tempuri.org/GetMyWebCam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoBrowserDump">
+      <soap12:operation soapAction="http://tempuri.org/SetForNoBrowserDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForBrowserDump">
+      <soap12:operation soapAction="http://tempuri.org/SetForBrowserDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <soap12:operation soapAction="http://tempuri.org/RemoveUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <soap12:operation soapAction="http://tempuri.org/ReceiveMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIfConnect">
+      <soap12:operation soapAction="http://tempuri.org/GetIfConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIfUpdate">
+      <soap12:operation soapAction="http://tempuri.org/GetIfUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterValue">
+      <soap12:operation soapAction="http://tempuri.org/RegisterValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForConnect">
+      <soap12:operation soapAction="http://tempuri.org/SetForConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoConnect">
+      <soap12:operation soapAction="http://tempuri.org/SetForNoConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForConnect">
+      <soap12:operation soapAction="http://tempuri.org/SetAllForConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoConnect">
+      <soap12:operation soapAction="http://tempuri.org/SetAllForNoConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForUpdate">
+      <soap12:operation soapAction="http://tempuri.org/SetForUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetForNoUpdate">
+      <soap12:operation soapAction="http://tempuri.org/SetForNoUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForUpdate">
+      <soap12:operation soapAction="http://tempuri.org/SetAllForUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllForNoUpdate">
+      <soap12:operation soapAction="http://tempuri.org/SetAllForNoUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsers">
+      <soap12:operation soapAction="http://tempuri.org/SelectUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssembly">
+      <soap12:operation soapAction="http://tempuri.org/GetAssembly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFile">
+      <soap12:operation soapAction="http://tempuri.org/WriteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapServer">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Host Info</wsdl:documentation>
+    <wsdl:port name="SoapServerSoap" binding="tns:SoapServerSoap">
+      <soap:address location="http://10.10.1.34/ws/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SoapServerSoap12" binding="tns:SoapServerSoap12">
+      <soap12:address location="http://10.10.1.34/ws/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

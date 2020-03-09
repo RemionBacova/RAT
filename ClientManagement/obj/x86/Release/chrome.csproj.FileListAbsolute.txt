@@ -1,0 +1,25 @@
+D:\Project\ChatServer\ClientManagement\bin\Release\chrome.exe.config
+D:\Project\ChatServer\ClientManagement\bin\Release\chrome.exe
+D:\Project\ChatServer\ClientManagement\bin\Release\chrome.XmlSerializers.dll
+D:\Project\ChatServer\ClientManagement\bin\Release\chrome.pdb
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.csprojResolveAssemblyReference.cache
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\Client.Properties.Resources.resources
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.csproj.GenerateResource.Cache
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.exe
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.pdb
+D:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.XmlSerializers.dll
+E:\Project\ChatServer\ClientManagement\bin\Release\chrome.exe.config
+E:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.exe
+E:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.pdb
+E:\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.XmlSerializers.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\chrome.exe.config
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\chrome.exe
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\chrome.XmlSerializers.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\chrome.pdb
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\Microsoft.DirectX.DirectSound.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Release\Microsoft.DirectX.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Release\Client.Properties.Resources.resources
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.csproj.GenerateResource.Cache
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.exe
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.pdb
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Release\chrome.XmlSerializers.dll

@@ -1,0 +1,9 @@
+D:\Project\ChatServer\Client\bin\Release\Client.exe.config
+D:\Project\ChatServer\Client\bin\Release\Client.exe
+D:\Project\ChatServer\Client\bin\Release\Client.pdb
+D:\Project\ChatServer\Client\obj\x86\Release\Client.frmClient.resources
+D:\Project\ChatServer\Client\obj\x86\Release\Client.Properties.Resources.resources
+D:\Project\ChatServer\Client\obj\x86\Release\Client.csproj.GenerateResource.Cache
+D:\Project\ChatServer\Client\obj\x86\Release\Client.exe
+D:\Project\ChatServer\Client\obj\x86\Release\Client.pdb
+D:\Project\ChatServer\Client\obj\x86\Release\Client.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+D:\Project\ChatServer\wscc\bin\wscc.dll
+D:\Project\ChatServer\wscc\bin\wscc.pdb
+D:\Project\ChatServer\wscc\obj\Release\wscc.dll
+D:\Project\ChatServer\wscc\obj\Release\wscc.pdb
+D:\Project\ChatServer\wscc\obj\Release\wscc.csprojResolveAssemblyReference.cache
+D:\Project\ChatServer\wscc\bin\wscc.dll.config

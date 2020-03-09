@@ -1,0 +1,9 @@
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Debug\chrome.exe.config
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Debug\chrome.exe
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Debug\chrome.pdb
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Debug\Microsoft.DirectX.DirectSound.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\bin\Debug\Microsoft.DirectX.dll
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Debug\Client.Properties.Resources.resources
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Debug\chrome.csproj.GenerateResource.Cache
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Debug\chrome.exe
+E:\School Proj Rat\Project\ChatServer\ClientManagement\obj\x86\Debug\chrome.pdb
